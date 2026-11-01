@@ -1,0 +1,9 @@
+Test_ID,Scenario,Test_Data,Expected_Result,Priority
+TC01,Create purchase order,Valid supplier material and quantity,Purchase order is created,High
+TC02,Reject zero quantity,Quantity 0,Validation prevents creation,High
+TC03,Record partial goods receipt,Order 100 receive 95,Receipt records 95 and leaves 5 outstanding,High
+TC04,Invoice quantity exceeds received,Ordered 100 received 95 invoiced 100,Invoice is blocked for review,High
+TC05,Invoice matches order and receipt,Ordered 40 received 40 invoiced 40 at PO price,Invoice passes simplified checks,High
+TC06,Invoice amount mismatch,Quantity 10 at PO price 1000 invoice amount 12000,Invoice is blocked,High
+TC07,Duplicate invoice number,Reuse an existing invoice number,Database rejects duplicate invoice number,Medium
+TC08,SQL explorer blocks write query,Enter DELETE statement,Only SELECT queries are allowed,Medium
